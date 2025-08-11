@@ -184,5 +184,28 @@
                 "bugfix": "Fix Vampire Lord undisguised unique warning not appearing"
             }
         ]
+    },
+    "2025-08-11": {
+        "SarmentiCampbell": [
+            {
+                "balance": "Added min-pop to roll vampire/werewolf event at roundstart"
+            },
+            {
+                "rscadd": "Added new hallucination for maniac/zizo curse/wonder"
+            },
+            {
+                "balance": "lessened the chance of receiving a mob's jumpscare"
+            }
+        ],
+        "wgtjunior743": [
+            {
+                "bugfix": "Only silver rapier got the silver enchantment now"
+            }
+        ],
+        "PineappleMan929": [
+            {
+                "balance": "Thieflings can be barbarians"
+            }
+        ]
     }
 }
