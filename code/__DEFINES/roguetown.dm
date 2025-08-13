@@ -158,6 +158,7 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 
 #define TRIUMPH_BUY_RACE_ALL "race_all"
 #define TRIUMPH_BUY_ANY_CLASS "pick_any"
+#define TRIUMPH_BUY_ADOPTION "adoption"
 
 // Storyteller category and its buys
 #define TRIUMPH_CAT_STORYTELLER "STORYTELLER"
@@ -176,6 +177,17 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define TRIUMPH_BUY_BAOTHA_INFLUENCE "baotha_influence"
 #define TRIUMPH_BUY_GRAGGAR_INFLUENCE "graggar_influence"
 #define TRIUMPH_BUY_MATTHIOS_INFLUENCE "matthios_influence"
+
+// Misc category and its buys
+#define TRIUMPH_CAT_MISC "MISC"
+
+#define TRIUMPH_BUY_PSYDON_FAVOURITE "psydon_favourite"
+
+// Misc category and its buys
+#define TRIUMPH_CAT_COMMUNAL "COMMUNAL"
+
+#define TRIUMPH_BUY_PSYDON_RETIREMENT "psydon_retirement"
+#define TRIUMPH_BUY_ORPHANAGE_RENOVATION "orphanage_renovation"
 
 // Bought triumph buys category
 #define TRIUMPH_CAT_ACTIVE_DATUMS "BOUGHT"
