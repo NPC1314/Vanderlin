@@ -5,7 +5,7 @@
 	icon_state = "troll"
 	icon_living = "troll"
 	icon_dead = "troll_dead"
-	pixel_x = -16
+	SET_BASE_PIXEL(-16, 0)
 
 	faction = list(FACTION_ORCS)
 	footstep_type = FOOTSTEP_MOB_HEAVY
@@ -56,7 +56,7 @@
 	del_on_deaggro = 99 SECONDS
 	retreat_health = 0
 	food_max = 250
-	food = 0
+
 	dodgetime = 50
 	aggressive = TRUE
 	dendor_taming_chance = DENDOR_TAME_PROB_HIGH
