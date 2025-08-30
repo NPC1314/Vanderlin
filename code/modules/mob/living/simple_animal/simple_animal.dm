@@ -112,7 +112,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	var/deathmessage = ""
 
 	///Played when someone punches the creature.
-	var/attacked_sound = "punch"
+	var/punched_sound = "punch"
 
 	///If the creature has, and can use, hands.
 	var/dextrous = FALSE
@@ -151,6 +151,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 
 	var/botched_butcher_results
 	var/perfect_butcher_results
+	/// Path of head to drop upon butchering
+	var/head_butcher
 
 	var/happy_funtime_mob = FALSE
 
@@ -231,6 +233,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	INVOKE_ASYNC(src, PROC_REF(emote), "lower_head", null, null, null, TRUE)
 	tame = TRUE
 	if(user)
+		SEND_SIGNAL(src, COMSIG_FRIENDSHIP_CHANGE, user, 55)
 		befriend(user)
 		record_round_statistic(STATS_ANIMALS_TAMED)
 		SEND_SIGNAL(user, COMSIG_ANIMAL_TAMED, src)
@@ -414,7 +417,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 				else
 					butcher = butcher_results
 			else
-				if(user.get_skill_level(/datum/skill/labor/butchering) == 5)
+				if(user.get_skill_level(/datum/skill/labor/butchering) >= 5)
 					butcher = perfect_butcher_results
 				else
 					butcher = butcher_results
@@ -425,6 +428,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 			if(CR.amount >= 10 MINUTES)
 				rotstuff = TRUE
 		var/atom/Tsec = drop_location()
+		if(head_butcher && (HAS_TRAIT(user, TRAIT_HEAD_BUTCHER) || butcher == perfect_butcher_results))
+			butcher[head_butcher] = 1
 		for(var/path in butcher)
 			for(var/i in 1 to butcher[path])
 				var/obj/item/I = new path(Tsec)

@@ -531,55 +531,37 @@
 	update_grab_intents()
 	return TRUE
 
-/obj/item/grabbing/attack_turf(turf/T, mob/living/user)
+/obj/item/grabbing/attack_atom(atom/attacked_atom, mob/living/user)
+	. = TRUE
 	if(!valid_check())
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	switch(user.used_intent.type)
 		if(/datum/intent/grab/move)
-			if(isturf(T))
-				user.Move_Pulled(T)
+			user.Move_Pulled(get_turf(attacked_atom))
 		if(/datum/intent/grab/smash)
+			if(!iscarbon(grabbed))
+				return
 			if(user.body_position == LYING_DOWN)
 				to_chat(user, span_warning("I must stand."))
 				return
-			if(limb_grabbed && grab_state > 0) //this implies a carbon victim
-				if(isopenturf(T))
-					if(iscarbon(grabbed))
-						var/mob/living/carbon/C = grabbed
-						if(!C.Adjacent(T))
-							return FALSE
-						if(C.body_position != LYING_DOWN)
-							return
-						playsound(C.loc, T.attacked_sound, 100, FALSE, -1)
-						smashlimb(T, user)
-				else if(isclosedturf(T))
-					if(iscarbon(grabbed))
-						var/mob/living/carbon/C = grabbed
-						if(!C.Adjacent(T))
-							return FALSE
-						if(!(C.body_position != LYING_DOWN))
-							return
-						playsound(C.loc, T.attacked_sound, 100, FALSE, -1)
-						smashlimb(T, user)
-
-/obj/item/grabbing/attack_obj(obj/O, mob/living/user)
-	if(!valid_check())
-		return
-	user.changeNext_move(CLICK_CD_MELEE)
-	if(user.used_intent.type == /datum/intent/grab/smash)
-		if(isstructure(O) && O.blade_dulling != DULLING_CUT)
-			if(user.body_position == LYING_DOWN)
-				to_chat(user, span_warning("I must stand."))
+			var/mob/living/carbon/C = grabbed
+			if(!C.Adjacent(attacked_atom))
 				return
 			if(limb_grabbed && grab_state > 0) //this implies a carbon victim
-				if(iscarbon(grabbed))
-					var/mob/living/carbon/C = grabbed
-					if(!C.Adjacent(O))
-						return FALSE
-					playsound(C.loc, O.attacked_sound, 100, FALSE, -1)
-					smashlimb(O, user)
-
+				if(isopenturf(attacked_atom))
+					if(C.body_position != LYING_DOWN)
+						return
+					playsound(C, attacked_atom.attacked_sound, 100, FALSE, -1)
+					smashlimb(attacked_atom, user)
+				else if(isclosedturf(attacked_atom))
+					if(C.body_position == LYING_DOWN)
+						return
+					playsound(C, attacked_atom.attacked_sound, 100, FALSE, -1)
+					smashlimb(attacked_atom, user)
+				else if(isstructure(attacked_atom) && attacked_atom.blade_dulling != DULLING_CUT)
+					playsound(C, attacked_atom.attacked_sound, 100, FALSE, -1)
+					smashlimb(attacked_atom, user)
 
 /obj/item/grabbing/proc/smashlimb(atom/A, mob/living/user) //implies limb_grabbed and sublimb are things
 	var/mob/living/carbon/C = grabbed
@@ -736,7 +718,7 @@
 	var/damage = user.get_punch_dmg()
 	if(HAS_TRAIT(user, TRAIT_STRONGBITE))
 		damage = damage*2
-	user.do_attack_animation(C, ATTACK_EFFECT_BITE)
+	user.do_attack_animation(C, ATTACK_EFFECT_BITE, used_item = FALSE)
 	C.next_attack_msg.Cut()
 	if(C.apply_damage(damage, BRUTE, limb_grabbed, armor_block))
 		playsound(C.loc, "smallslash", 100, FALSE, -1)
@@ -744,7 +726,8 @@
 		var/datum/wound/caused_wound = limb_grabbed.bodypart_attacked_by(BCLASS_BITE, damage, user, sublimb_grabbed, crit_message = TRUE)
 		if(user.mind)
 			//TODO: Werewolf Signal
-			if(user.mind.has_antag_datum(/datum/antagonist/werewolf))
+			var/datum/antagonist/werewolf/werewolf_antag = user.mind.has_antag_datum(/datum/antagonist/werewolf)
+			if(werewolf_antag && werewolf_antag.transformed)
 				var/mob/living/carbon/human/human = user
 				if(istype(caused_wound))
 					caused_wound?.werewolf_infect_attempt()
