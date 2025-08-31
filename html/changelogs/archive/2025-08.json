@@ -835,5 +835,12 @@
                 "rscadd": "Door bumping with keys unlocks doors."
             }
         ]
+    },
+    "2025-08-31": {
+        "PotatoTomahto": [
+            {
+                "code_imp": "repairable component to refactor repairing structures"
+            }
+        ]
     }
 }
