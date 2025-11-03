@@ -32827,7 +32827,6 @@
 "tap" = (
 /obj/structure/barricade/wooden/crude,
 /obj/structure/window/stained/silver,
-/obj/effect/mapping_helpers/structure/breaker,
 /turf/open/floor/church/purple,
 /area/rogue/indoors/town/church/inquisition)
 "tas" = (
