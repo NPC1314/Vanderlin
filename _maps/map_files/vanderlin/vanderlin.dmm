@@ -2218,6 +2218,22 @@
 /obj/item/inqarticles/indexer{
 	pixel_x = 8
 	},
+/obj/item/paper/inqslip/accusation{
+	pixel_x = -10;
+	pixel_y = 15
+	},
+/obj/item/paper/inqslip/accusation{
+	pixel_x = 9;
+	pixel_y = 15
+	},
+/obj/item/paper/inqslip/accusation{
+	pixel_x = 4;
+	pixel_y = 15
+	},
+/obj/item/paper/inqslip/accusation{
+	pixel_x = -3;
+	pixel_y = 15
+	},
 /turf/open/floor/churchbrick,
 /area/rogue/indoors/inq/import)
 "bhD" = (
@@ -6602,10 +6618,6 @@
 /turf/open/floor/carpet,
 /area/rogue/indoors/town)
 "dLR" = (
-/obj/structure/fluff/railing/border{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
@@ -6613,6 +6625,9 @@
 	dir = 1
 	},
 /obj/structure/fluff/walldeco/church/line,
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
 /turf/open/floor/churchbrick,
 /area/rogue/indoors/town/church/inquisition)
 "dLY" = (
@@ -8397,6 +8412,14 @@
 "eHo" = (
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/church/purple,
+/area/rogue/indoors/town/church/inquisition)
+"eHp" = (
+/obj/structure/fluff/railing/border{
+	dir = 9;
+	pixel_x = 32;
+	pixel_y = -32
+	},
+/turf/open/transparent/openspace,
 /area/rogue/indoors/town/church/inquisition)
 "eHw" = (
 /obj/structure/flora/newleaf{
@@ -13988,6 +14011,16 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/metal/barograte,
 /area/rogue/outdoors/mountains)
+"hOs" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/chair/stool,
+/turf/open/floor/churchbrick,
+/area/rogue/indoors/town/church/inquisition)
 "hOG" = (
 /obj/structure/door/violet{
 	name = "Heir's Chambers"
@@ -18885,11 +18918,10 @@
 /turf/closed/mineral/random/high,
 /area/rogue/under/cave)
 "kNA" = (
-/obj/structure/fluff/railing/border{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/structure/fluff/railing/border{
 	dir = 8
 	},
 /turf/open/floor/church/purple,
@@ -27238,6 +27270,18 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/carpet/stellar,
 /area/rogue/indoors/town/magician)
+"pLI" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/turf/open/floor/churchbrick,
+/area/rogue/indoors/town/church/inquisition)
 "pLJ" = (
 /obj/structure/fluff/walldeco/bath/wallpipes{
 	pixel_x = -7;
@@ -30362,6 +30406,10 @@
 	},
 /turf/open/floor/church,
 /area/rogue/under/town/basement)
+"rHD" = (
+/obj/structure/table/wood/crafted,
+/turf/open/floor/churchbrick,
+/area/rogue/indoors/town/church/inquisition)
 "rHH" = (
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_x = -32;
@@ -39301,6 +39349,16 @@
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/tile,
 /area/rogue/indoors/town/manor/halls/s)
+"wUN" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/chair/stool,
+/turf/open/floor/churchbrick,
+/area/rogue/indoors/town/church/inquisition)
 "wVd" = (
 /obj/structure/bars,
 /turf/open/floor/cobble/alt,
@@ -39531,8 +39589,7 @@
 /area/rogue/under/cave)
 "xcP" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	pixel_x = -24
+	dir = 8
 	},
 /turf/open/floor/church/purple,
 /area/rogue/indoors/town/church/inquisition)
@@ -151505,8 +151562,8 @@ bHl
 hsx
 fgn
 rap
-hds
-xrn
+hOs
+rHD
 xrn
 hTz
 rap
@@ -151706,9 +151763,9 @@ fgn
 dhF
 fgn
 fgn
-dOF
 rap
-gif
+rap
+wUN
 hBC
 rap
 rap
@@ -151908,7 +151965,7 @@ dhF
 muV
 seC
 rap
-gif
+pLI
 fKr
 rap
 rap
@@ -153529,7 +153586,7 @@ uww
 jBa
 jBa
 jBa
-jBa
+eHp
 ifA
 iEQ
 rap
@@ -153730,9 +153787,9 @@ xcP
 dLR
 kNA
 kNA
-kNA
 xcP
-iEQ
+xcP
+rap
 hGw
 aTl
 dhF
