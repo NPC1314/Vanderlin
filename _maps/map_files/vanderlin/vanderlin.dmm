@@ -18668,12 +18668,6 @@
 /obj/structure/table/wood/plain_alt,
 /turf/open/floor/ruinedwood/turned,
 /area/rogue/indoors/town)
-"kDL" = (
-/obj/structure/stairs/stone{
-	dir = 1
-	},
-/turf/open/floor/dirt/road,
-/area/rogue/indoors/town/church/inquisition)
 "kDN" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/dirt,
@@ -19412,7 +19406,7 @@
 /obj/structure/stairs/stone{
 	dir = 1
 	},
-/turf/closed/mineral,
+/turf/open/floor/cobblerock,
 /area/rogue/indoors/town/church/inquisition)
 "ldX" = (
 /mob/living/simple_animal/hostile/retaliate/bigrat,
@@ -73744,7 +73738,7 @@ guB
 sjG
 fkZ
 djd
-kDL
+qEH
 jVt
 pSa
 jVt
@@ -73946,7 +73940,7 @@ guB
 sjG
 fkZ
 djd
-kDL
+qEH
 pSa
 pSa
 dtb
@@ -154541,7 +154535,7 @@ rap
 tap
 xId
 eHo
-ldV
+qEH
 jBa
 jBa
 xBV
@@ -154743,7 +154737,7 @@ rap
 tap
 ssD
 tSn
-ldV
+qEH
 jBa
 jBa
 xBV
