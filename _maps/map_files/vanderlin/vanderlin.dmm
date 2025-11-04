@@ -2073,9 +2073,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/orphanage)
 "beH" = (
-/obj/structure/curtain/bounty/dir{
-	dir = 1
-	},
+/obj/structure/curtain/bounty/dir,
 /turf/open/floor/churchbrick,
 /area/rogue/indoors/town/church/inquisition)
 "beI" = (
@@ -2856,6 +2854,10 @@
 "bBl" = (
 /obj/structure/table/wood/plain_alt,
 /obj/item/book/bibble/psy,
+/obj/item/candle/yellow/lit{
+	pixel_x = 12;
+	pixel_y = 11
+	},
 /turf/open/floor/twig,
 /area/rogue/indoors/town/church/inquisition)
 "bBJ" = (
@@ -6050,6 +6052,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
+/obj/machinery/light/fueled/wallfire/candle/blue/r,
 /turf/open/floor/churchbrick,
 /area/rogue/indoors/town/church/inquisition)
 "dwm" = (
@@ -9168,6 +9171,10 @@
 "feg" = (
 /turf/open/floor/carpet/green,
 /area/rogue/indoors/town)
+"fei" = (
+/obj/machinery/light/fueled/wallfire/candle/blue,
+/turf/open/floor/church/purple,
+/area/rogue/indoors/town/church/inquisition)
 "fev" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/ammo_casing/caseless/arrow,
@@ -10037,6 +10044,12 @@
 /obj/item/natural/rock/random,
 /turf/open/floor/naturalstone,
 /area/rogue/outdoors/town)
+"fBU" = (
+/obj/machinery/light/fueled/wallfire/candle/blue{
+	pixel_y = -32
+	},
+/turf/open/floor/church/purple,
+/area/rogue/indoors/town/church/inquisition)
 "fCd" = (
 /obj/machinery/light/fueled/firebowl/stump,
 /turf/open/floor/dirt,
@@ -21627,9 +21640,7 @@
 /turf/open/floor/metal/alt,
 /area/rogue/indoors/town/clocktower)
 "mzC" = (
-/obj/structure/curtain/bounty/dir{
-	dir = 1
-	},
+/obj/structure/curtain/bounty/dir,
 /turf/open/floor/twig,
 /area/rogue/indoors/town/church/inquisition)
 "mzE" = (
@@ -23045,6 +23056,12 @@
 /obj/structure/hotspring/border/fourteen,
 /turf/open/floor/grass/eora,
 /area/rogue/outdoors/eora)
+"nnu" = (
+/obj/machinery/light/fueled/wallfire/candle/blue{
+	pixel_y = -32
+	},
+/turf/open/water/cleanshallow,
+/area/rogue/indoors/town/church/inquisition)
 "nnv" = (
 /obj/effect/decal/remains/human{
 	pixel_x = -3;
@@ -150986,7 +151003,7 @@ hgl
 dhF
 cCk
 xWd
-xWd
+nnu
 djd
 djd
 uVx
@@ -151583,12 +151600,12 @@ xIp
 bHl
 hsx
 fgn
-rap
+fei
 hOs
 rHD
 xrn
 hTz
-rap
+fBU
 fgn
 mcf
 elv
