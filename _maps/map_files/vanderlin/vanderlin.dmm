@@ -8095,12 +8095,14 @@
 /turf/open/floor/carpet,
 /area/rogue/indoors/town/tavern)
 "eyl" = (
-/obj/structure/chair/bench/church/r,
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
 /obj/effect/landmark/start/orthodoxist{
+	dir = 1
+	},
+/obj/structure/chair/bench/church/r{
 	dir = 1
 	},
 /turf/open/floor/churchbrick,
@@ -16172,7 +16174,9 @@
 /turf/open/floor/cobblerock,
 /area/rogue/outdoors/town)
 "jep" = (
-/obj/structure/chair/bench/church/r,
+/obj/structure/chair/bench/church/r{
+	dir = 1
+	},
 /turf/open/floor/church/purple,
 /area/rogue/indoors/town/church/inquisition)
 "jeq" = (
@@ -29219,12 +29223,14 @@
 /turf/open/floor/hexstone,
 /area/rogue/indoors/town/manor/halls/w)
 "rbf" = (
-/obj/structure/chair/bench/church/r,
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
 /obj/effect/landmark/start/orthodoxist{
+	dir = 1
+	},
+/obj/structure/chair/bench/church/r{
 	dir = 1
 	},
 /turf/open/floor/churchbrick,
@@ -38827,8 +38833,10 @@
 /turf/open/floor/tile,
 /area/rogue/indoors/town/church)
 "wDf" = (
-/obj/structure/chair/bench/church/r,
 /obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/chair/bench/church/r{
 	dir = 1
 	},
 /turf/open/floor/churchbrick,
