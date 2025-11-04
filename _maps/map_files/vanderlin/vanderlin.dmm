@@ -4533,6 +4533,10 @@
 	},
 /turf/open/floor/cobble,
 /area/rogue/indoors/town/magician)
+"cCk" = (
+/obj/item/soap,
+/turf/open/floor/twig,
+/area/rogue/indoors/town/church/inquisition)
 "cCr" = (
 /turf/closed/wall/mineral/roofwall/middle{
 	dir = 4
@@ -21619,8 +21623,10 @@
 /turf/open/floor/metal/alt,
 /area/rogue/indoors/town/clocktower)
 "mzC" = (
-/obj/item/soap,
-/turf/open/water/cleanshallow,
+/obj/structure/curtain/bounty/dir{
+	dir = 1
+	},
+/turf/open/floor/twig,
 /area/rogue/indoors/town/church/inquisition)
 "mzE" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -28312,6 +28318,11 @@
 /obj/structure/toilet,
 /turf/open/floor/blocks/paving,
 /area/rogue/indoors/town)
+"qtz" = (
+/obj/machinery/light/fueled/wallfire/candle/blue/r,
+/obj/structure/toilet,
+/turf/open/floor/twig,
+/area/rogue/indoors/town/church/inquisition)
 "qtI" = (
 /obj/structure/table/wood/plain_alt,
 /obj/item/instrument/harp,
@@ -38018,6 +38029,9 @@
 	},
 /turf/open/floor/ruinedwood/spiral,
 /area/rogue/outdoors/river)
+"whs" = (
+/turf/open/water/marsh,
+/area/rogue/outdoors/rtfield/safe)
 "whv" = (
 /turf/open/floor/churchmarble,
 /area/rogue/indoors/town/manor/phys)
@@ -109155,7 +109169,7 @@ wMs
 mZi
 fYR
 aWD
-aWD
+nEW
 nlp
 aWD
 nlp
@@ -109556,7 +109570,7 @@ wMs
 wMs
 wMs
 wMs
-grS
+nEW
 aWD
 fYR
 aWD
@@ -109758,10 +109772,10 @@ wMs
 wMs
 wMs
 nlp
-grS
+mZi
 aWD
-aWD
-aWD
+nEW
+nEW
 nlp
 aWD
 aWD
@@ -109960,7 +109974,7 @@ rnG
 wMs
 jwj
 aWD
-grS
+mZi
 nlp
 grS
 aWD
@@ -110162,7 +110176,7 @@ rnG
 rnG
 wMs
 btt
-mAU
+nlp
 nlp
 aWD
 aWD
@@ -110367,7 +110381,7 @@ mZi
 nlp
 mZi
 aWD
-aWD
+nEW
 jpK
 nlp
 nlp
@@ -110565,11 +110579,11 @@ fgn
 fgn
 vgJ
 rnG
-aWD
+whs
 nlp
 nlp
-mAU
-mAU
+nlp
+nlp
 nlp
 nlp
 nlp
@@ -110767,10 +110781,10 @@ mWx
 fgn
 vgJ
 vgJ
+whs
+whs
 nlp
-fYR
 mAU
-nlp
 nlp
 mAU
 nlp
@@ -110969,8 +110983,8 @@ vyI
 dhF
 vgJ
 rnG
-nlp
-nlp
+whs
+whs
 nlp
 nlp
 mAU
@@ -150962,11 +150976,11 @@ rap
 hds
 hgl
 dhF
-xWd
+cCk
 xWd
 xWd
 djd
-uVx
+djd
 uVx
 uVx
 uVx
@@ -151165,10 +151179,10 @@ rap
 rap
 beH
 oNb
-xWd
-xWd
-ngT
-uVx
+jKw
+jKw
+djd
+djd
 uVx
 uVx
 uVx
@@ -151369,8 +151383,8 @@ beH
 jKw
 jKw
 mzC
+qtz
 djd
-uVx
 uVx
 uVx
 uVx
