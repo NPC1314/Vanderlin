@@ -2524,6 +2524,7 @@
 /turf/open/floor/dirt/road,
 /area/rogue/indoors/town)
 "bqs" = (
+/obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/tile/bath,
 /area/rogue/indoors/town/manor/lord_appt)
 "bqz" = (
@@ -11266,8 +11267,7 @@
 /area/rogue/outdoors/town)
 "ggP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/ring/silver,
-/turf/open/floor/ruinedwood/spiral,
+/turf/closed/wall/mineral/decorstone,
 /area/rogue/under/town/basement)
 "ggR" = (
 /obj/effect/spawner/map_spawner/loot/food,
@@ -12294,7 +12294,15 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/merc_guild)
 "gIV" = (
-/obj/machinery/light/fueled/wallfire/candle/l,
+/obj/structure/fluff/walldeco/church/line,
+/obj/item/candle/yellow/lit/infinite{
+	pixel_x = -13;
+	pixel_y = 14
+	},
+/obj/item/candle/yellow/lit/infinite{
+	pixel_x = 13;
+	pixel_y = 2
+	},
 /turf/open/floor/tile/bath,
 /area/rogue/indoors/town/manor/lord_appt)
 "gJA" = (
@@ -16090,8 +16098,19 @@
 /turf/closed/wall/mineral/decorstone,
 /area/rogue/outdoors/river)
 "iUe" = (
-/obj/structure/chair/stool,
-/turf/open/floor/tile/bath,
+/obj/structure/rack/shelf{
+	pixel_x = 32;
+	pixel_y = -1
+	},
+/obj/item/soap/bath{
+	pixel_x = 31;
+	pixel_y = 4
+	},
+/obj/item/natural/cloth{
+	pixel_x = 38;
+	pixel_y = 9
+	},
+/turf/open/floor/tile/bfloorz,
 /area/rogue/indoors/town/manor/lord_appt)
 "iUu" = (
 /obj/effect/decal/remains/human,
@@ -18197,10 +18216,6 @@
 /obj/structure/bookcase/random_recipes,
 /turf/open/floor/carpet/green,
 /area/rogue/indoors/town)
-"kcc" = (
-/obj/item/coin/copper/pile,
-/turf/open/floor/ruinedwood/spiral,
-/area/rogue/under/town/basement)
 "kcg" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/dirt,
@@ -20106,6 +20121,9 @@
 "lnn" = (
 /obj/item/gear,
 /obj/item/reagent_containers/food/snacks/crow,
+/obj/effect/decal/cleanable/dirt/cobweb{
+	dir = 1
+	},
 /turf/open/floor/ruinedwood/spiral,
 /area/rogue/under/town/basement)
 "lnG" = (
@@ -21677,6 +21695,12 @@
 /obj/item/clothing/shoes/nobleboot,
 /turf/open/floor/wood,
 /area/rogue/indoors/town)
+"mnE" = (
+/obj/machinery/light/fueled/wallfire/candle/l,
+/obj/structure/toilet,
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/floor/tile/bath,
+/area/rogue/indoors/town/manor/lord_appt)
 "mnL" = (
 /obj/structure/rotation_piece/cog,
 /turf/open/floor/blocks/stonered/tiny,
@@ -22239,6 +22263,11 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/indoors/town/garrison/lieutenant)
+"mDl" = (
+/obj/structure/ladder,
+/obj/structure/ladder,
+/turf/open/floor/ruinedwood/spiral,
+/area/rogue/under/town/basement)
 "mDs" = (
 /obj/structure/table/wood/counter/end{
 	dir = 1
@@ -23448,8 +23477,11 @@
 /turf/open/floor/dirt,
 /area/rogue/outdoors/rtfield/safe)
 "nkl" = (
-/obj/item/bin/water/gross,
-/turf/open/floor/tile/bath,
+/obj/structure/mirror/fancy{
+	pixel_x = -31;
+	pixel_y = -2
+	},
+/turf/open/floor/tile/bfloorz,
 /area/rogue/indoors/town/manor/lord_appt)
 "nkA" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -26164,6 +26196,7 @@
 	pixel_x = 8;
 	pixel_y = 28
 	},
+/obj/structure/chair/stool,
 /turf/open/water/bath,
 /area/rogue/indoors/town/manor/lord_appt)
 "oJj" = (
@@ -36418,6 +36451,11 @@
 	},
 /turf/open/floor/naturalstone,
 /area/rogue/outdoors/river)
+"uKQ" = (
+/obj/item/coin/copper/pile,
+/obj/structure/fluff/nest,
+/turf/open/floor/ruinedwood/spiral,
+/area/rogue/under/town/basement)
 "uLf" = (
 /obj/machinery/light/fueled/lanternpost/fixed{
 	pixel_x = -2;
@@ -36868,6 +36906,8 @@
 /area/rogue/indoors/town/church)
 "uYr" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
+/obj/item/clothing/ring/silver,
+/obj/item/natural/feather,
 /turf/open/floor/ruinedwood/spiral,
 /area/rogue/under/town/basement)
 "uYD" = (
@@ -101587,10 +101627,10 @@ vgJ
 vgJ
 vgJ
 vgJ
-vgJ
-vgJ
-vgJ
-vgJ
+rDr
+rDr
+rDr
+rDr
 vgJ
 vgJ
 vgJ
@@ -101790,7 +101830,7 @@ vgJ
 vgJ
 vgJ
 rDr
-rDr
+mVx
 rDr
 rDr
 rDr
@@ -101992,7 +102032,7 @@ vgJ
 vgJ
 vgJ
 rDr
-mVx
+bET
 bET
 bET
 bET
@@ -141988,7 +142028,7 @@ vgJ
 vgJ
 vgJ
 vgJ
-vgJ
+nCG
 nCG
 snf
 guQ
@@ -142191,7 +142231,7 @@ vgJ
 vgJ
 vgJ
 nCG
-nCG
+mDl
 snf
 guQ
 rDr
@@ -142393,8 +142433,8 @@ vgJ
 vgJ
 vgJ
 rDr
-iua
-guQ
+rDr
+rDr
 guQ
 guQ
 ikz
@@ -142595,7 +142635,7 @@ vgJ
 vgJ
 vgJ
 rDr
-rDr
+uKQ
 rDr
 rDr
 rDr
@@ -142799,7 +142839,7 @@ vgJ
 rDr
 bBh
 tCL
-kcc
+guQ
 rDr
 snf
 jQt
@@ -143002,7 +143042,7 @@ rDr
 lnn
 uYr
 vZp
-rDr
+fYT
 snf
 jQt
 jQt
@@ -143202,9 +143242,9 @@ vgJ
 vgJ
 rDr
 ggP
-guQ
-bBh
-fYT
+fGn
+fGn
+fGn
 guQ
 guQ
 guQ
@@ -143404,7 +143444,7 @@ vgJ
 cKY
 cKY
 cKY
-cKY
+mnE
 cKY
 cKY
 law
