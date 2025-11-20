@@ -171,7 +171,6 @@
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "net"
-	breakouttime = 3.5 SECONDS //easy to apply, easy to break out of
 	gender = NEUTER
 	var/knockdown = 0
 
@@ -186,27 +185,18 @@
 	ensnare(hit_atom)
 
 /obj/item/net/proc/ensnare(mob/living/carbon/C)
-	if(!C.legcuffed && C.num_legs >= 2)
-		visible_message("<span class='danger'>\The [src] ensnares [C]!</span>")
-		C.legcuffed = src
-		forceMove(C)
-		C.update_inv_legcuffed()
-		SSblackbox.record_feedback("tally", "handcuffs", 1, type)
-		to_chat(C, "<span class='danger'>\The [src] entraps you!</span>")
-		//C.Knockdown(knockdown)
-		C.apply_status_effect(/datum/status_effect/debuff/netted)
-		playsound(src, 'sound/blank.ogg', 50, TRUE)
+	visible_message("<span class='danger'>\The [src] ensnares [C]!</span>")
+	to_chat(C, "<span class='danger'>\The [src] entraps you!</span>")
+	C.Knockdown(knockdown)
+	C.apply_status_effect(/datum/status_effect/debuff/netted)
+	playsound(src, 'sound/blank.ogg', 50, TRUE)
 
 // Failsafe in case the item somehow ends up being destroyed
 /obj/item/net/Destroy()
 	if(iscarbon(loc))
 		var/mob/living/carbon/M = loc
-		if(M.legcuffed == src)
-			M.legcuffed = null
-			M.remove_movespeed_modifier(MOVESPEED_ID_LEGCUFF_SLOWDOWN, TRUE)
-			M.update_inv_legcuffed()
-			if(M.has_status_effect(/datum/status_effect/debuff/netted))
-				M.remove_status_effect(/datum/status_effect/debuff/netted)
+		if(M.has_status_effect(/datum/status_effect/debuff/netted))
+			M.remove_status_effect(/datum/status_effect/debuff/netted)
 	return ..()
 
 /obj/structure/noose

@@ -351,8 +351,8 @@
 /datum/status_effect/debuff/netted
 	id = "net"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/netted
-	duration = 2 MINUTES
-	effectedstats = list(STATKEY_SPD = -5, STATKEY_END = -2)
+	duration = 10 SECONDS
+	effectedstats = list(STATKEY_SPD = -2, STATKEY_END = -2)
 
 /datum/status_effect/debuff/netted/on_apply()
 		. = ..()
